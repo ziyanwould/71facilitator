@@ -1,0 +1,443 @@
+.main-con {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+    height: auto;
+}
+.pos {
+    padding-top: 15px;
+}
+.pub-steps{
+    padding: 15px 0px 50px 0px;
+}
+.pub-steps ul{
+    width: 1000px;
+}
+
+.pub-steps ul li{
+    float: left;
+    width: 325px;
+    text-align: center;
+    background: #ccc;
+    height: 30px;
+    margin-right: 8px;
+    line-height: 30px;
+}
+.pub-steps ul li.cur{
+    background: orange;
+    color:#fff;
+}
+
+
+.tip {
+    width: 975px;
+    height: 35px;
+    line-height: 35px;
+    background: #f90;
+    font-weight: bold;
+    color: #fff;
+    padding-left: 25px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.main{
+    width: 998px;
+    overflow: hidden;
+    margin: 0 auto;
+    background: url(/images/fabu2_bg.png) repeat-y;
+}
+.main_left{
+    width: 760px;
+    padding-left: 25px;
+}
+.main_left .title{
+    font-size: 14px;
+    padding-top: 20px;
+}
+.main_left .title span{
+    font-weight:bold;
+}
+.main_left .title a{
+    font-family: "宋体";
+    color:#337BB8;
+    margin-left: 20px;
+}
+.form p,.form li{
+    margin-top: 15px;
+    height: 30px;
+    line-height: 30px;
+    clear:both;
+}
+.form p span,.form li span{
+    font-weight: bold;
+    float: left;
+}
+ .form  em {
+   color:red;
+   float: left; 
+   margin-right:5px; 
+   width:6px;
+   height:30px; 
+    }
+.form p input,.form li input{
+    height: 28px;
+    border: 1px solid #CCCCCC;
+    margin-left: 13px;
+    padding-left: 10px;
+    float: left;
+    line-height: 28px;
+    margin-right:5px;
+}
+.pay2{
+    width:110px;
+}
+.tip_bg{margin-left:80px;}
+.form p .course{
+    width: 385px;
+}
+.phone,.username,.qq{
+    width: 150px;
+}
+
+.form ul{
+    width: 600px;
+    overflow: hidden;
+}
+
+.form ul li input{
+    width: 195px;
+    padding-left: 10px;
+    float: left;
+}
+#sure{
+  width: 60px;
+  padding: 0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.form ul li .pay1,.form ul li .pay2{
+  width: 100px;
+}
+.form p .adress{
+  width: 338px;
+}
+.form .p1{
+  height: 100px;
+}
+.form .p1 textarea{
+  width:348px;
+  height:88px;
+  border: 1px solid #ccc;
+  resize:none;
+  float: left;
+  margin-left: 15px;
+  overflow: auto;
+}
+.form div h4{
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.form div textarea{
+  width: 590px;
+  height: 179px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  overflow: auto;
+}
+.instruction {
+  margin-top: 10px;
+  font-family: "宋体";
+  font-size: 12px;
+  color: #919191;
+}
+.instruction p{
+  padding-left: 70px;
+  position: relative;
+  line-height: 20px;
+}
+.instruction input{
+  opacity: 0;
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  top:0;
+  left: 0;
+}
+select{
+  /*width: 100px;*/
+  height: 28px;
+  border: 1px solid #ccc;
+  float: left;
+  margin-left: 13px;
+}
+#copper{
+  width: 150px;
+}
+.instruction span{
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+  background: #F2F2F2;
+  font-family: "宋体";
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 5px;
+  left:0px;
+}
+.instruction a{
+  color: #2F6ECF;
+}
+#next{
+  width: 121px;
+  height: 34px;
+  text-align: center;
+  background: url(yue09.gif) no-repeat;
+  display: block;
+  line-height: 34px;
+  color: #fff;
+  font-weight: bold;
+  margin: 22px 10px 10px 85px;
+  cursor:pointer;
+}
+.main_right{
+  width: 213px;
+}
+.main_right .contact{
+ width: 165px;
+  padding: 20px 0;
+  margin: 38px auto 0;
+  border-top: 1px dotted #ccc;
+  border-bottom: 1px dotted #ccc;
+  clear: both;
+
+}
+.main_right .contact h4{
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.main_right .contact p{
+  color: #ff8a00;
+}
+.main_right .contact span{
+  font-size: 12px;
+  color: #9D9D9D;
+  line-height: 24px;
+}
+.main_right .contact .phone{
+  font-size: 14px;
+  color: #1c1c1c;
+}
+.main_right .contact a{
+  border: 1px solid #ff8a00;
+  width: 122px;
+  height: 37px;
+  font: 14px/37px 'Microsoft Yahei';
+  text-align: center;
+  color: #ff8a00;
+  transition: all .3s ease;
+  border-radius: 3px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.main_right .contact a:hover{
+  background:  #ff8a00;
+  color: #fff;
+}
+.code_img{
+  margin: 20px 0 0 20px;
+}
+
+
+#loginReg {
+    width: 620px;
+    font-family: "宋体";
+    font-size: 14px;
+    margin: 95px 0 0 85px;
+    overflow: hidden;
+}
+#loginReg .hd {
+  position: relative;
+  z-index: 10;
+}
+#loginReg .hd li{
+  float:left;
+  padding:0 20px;
+  height:30px;
+  line-height:30px;
+  margin-left:-1px;
+  border:1px solid #ccc;
+  text-align:center;
+  cursor:pointer;
+  border-bottom: none;
+}
+#loginReg .hd li.cur{
+  border-top:2px solid #e06238;
+  border-bottom:1px solid #F6F6F6;
+  font-weight:bold;
+}
+#loginReg  input{
+  width: 210px;
+  height: 30px;
+  border: 1px solid #ccc;
+  line-height: 30px;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+#loginReg .bd{
+  width:620px;
+  margin-left:-1px;
+  position:relative;
+  top:-1px;
+  z-index:1;
+}
+#loginReg .bd p{
+  height:32px;
+  line-height:32px;
+  margin-bottom:10px;
+}
+#login {
+  padding: 30px;
+  height: 165px;
+  border: 1px solid #ccc;
+  position: relative;
+}
+#tip,#tip1{
+    color: red;
+    font-size: 14px;
+    line-height: 30px;
+    padding-left: 85px;
+    display: none;
+}
+.greed{
+  font-size: 12px;
+}
+.greed a:link,.greed a:visited{
+  color: #145AB6;
+}
+.code {
+    position: absolute;
+    right: 41px;
+    font-size: 12px;
+    top: 25px;
+    border-left: 1px solid #E8E8E8;
+    padding-left: 45px;
+}
+.code div {
+    text-align: center;
+    line-height: 30px;
+}
+#reg {
+    padding: 30px 0 10px 10px;
+    height: 220px;
+    position: relative;
+    border: 1px solid #ccc;
+    display: none;
+}
+#reg span {
+    width: 80px;
+    height: 40px;
+    text-align: right;
+    display: inline-block;
+}
+#loginReg .phone_btn {
+    width: 120px;
+    margin: 0px 0px 10px 110px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.form h3 {
+    line-height: 40px;
+    border-bottom: 1px solid orange;
+    color: orange;
+}
+.uploadify{
+    float: left;
+    margin: 8px 0 0 8px;
+}
+.uploadify-queue {
+    margin-left:100px;
+}
+.w60 {
+    width:60px;
+}
+.w90 {
+    width:90px;
+}
+#s_time, #e_time {
+    cursor:pointer;
+}
+
+form p.stagedata {
+    padding-left:73px;
+    padding-bottom:15px;
+}
+
+.content {
+    padding:15px 0;
+    position: relative;
+    float: left;
+}
+.content span{
+    font-weight: bold;
+}
+.content em {
+    color: red;
+    float: left;
+    margin-right: 5px;
+    width: 6px;
+    height: 30px;
+}
+#editor {
+    margin-left: 86px;
+    margin-top: -18px;
+}
+
+#upload_img {
+    position: absolute;
+    right: -138px;
+    top: 2px;
+}
+
+#upload_img-queue {
+    position: absolute;
+    left: -25px;
+    top: 40px;
+    width: 310px;
+}
+
+#show_title_img {
+    margin-left:13px;
+    background:#fff;
+}
+#upload_title_img {
+    position: absolute;
+    left: 85px;
+    bottom: 20px;
+}
+.upload-img-div {
+    position:relative;
+    height:300px;
+    margin-top:15px;
+}
+#upload_img_btn {
+    position: absolute;
+    left: 85px;
+    bottom: 10px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    background: #505050;
+    color: #fff;
+    cursor: pointer;
+}

@@ -1,0 +1,268 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  width: 0px;
+  height: 0px;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Microsoft YaHei";
+}
+
+.facilitator {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.fac_title {
+  line-height: 22px;
+  margin: 20px 0;
+}
+.fac_title a {
+  color: #999;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.fac_area {
+  width: 1200px;
+  float: left;
+  font-size: 12px;
+  background: #F5F5F5;
+  padding-bottom: 15px;
+}
+
+.my_area {
+  margin-top: 15px;
+  width: 1200px;
+  float: left;
+}
+.my_area em {
+  color: #333;
+  float: left;
+  margin: 0 20px;
+}
+.my_area > div {
+  width: 1110px;
+  margin-left: 76px;
+}
+.my_area > div a {
+  color: #666;
+  font-size: 12px;
+  float: left;
+  cursor: pointer;
+  margin-right: 25px;
+  margin-bottom: 5px;
+}
+.my_area > div a:hover {
+  color: #157EF6;
+}
+
+.fac_price {
+  margin-top: 15px;
+  width: 1200px;
+  float: left;
+}
+.fac_price em {
+  color: #333;
+  float: left;
+  margin: 0 20px;
+}
+.fac_price > div {
+  width: 1110px;
+  margin-left: 76px;
+}
+.fac_price > div a {
+  color: #666;
+  font-size: 12px;
+  float: left;
+  cursor: pointer;
+  margin-right: 25px;
+  margin-bottom: 5px;
+}
+.fac_price > div a:hover {
+  color: #157EF6;
+}
+
+.city_listDet img {
+  float: left;
+  width: 200px;
+  height: 150px;
+  margin-right: 28px;
+  cursor: pointer;
+}
+
+.w_askBox span {
+  float: left;
+  color: #333;
+  font-size: 22px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.w_sales {
+  float: left;
+  padding-bottom: 10px;
+  display: block;
+  color: #666;
+  width: 770px;
+  padding-top: 5px;
+}
+
+.city_listDets b {
+  padding-left: 20px;
+  background: url(../images/city_position.png) no-repeat left center;
+}
+
+.city_listDet b {
+  width: 750px;
+  color: #999;
+  font-size: 14px;
+  margin: 10px 0;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.city_listDets i {
+  color: #999;
+  width: 300px;
+  line-height: 18px;
+  margin-top: 0;
+  padding-left: 20px;
+  background: url(../images/city_tel.png) no-repeat left center;
+  font-size: 14px;
+  text-align: left;
+}
+
+.city_listDet i {
+  margin: 10px 10px 10px 0;
+}
+
+.fac_count {
+  width: 1200px;
+  float: left;
+}
+.fac_count li {
+  width: 1200px;
+  float: left;
+  padding: 20px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.city_Online em {
+  display: inline-block;
+  font-size: 30px;
+  color: #EC4A4A;
+  float: right;
+  margin: 30px -29px 2px 0px;
+  line-height: 1.4;
+  font-weight: bold;
+  position: relative;
+  margin-top: 15px;
+  margin-right: -40px;
+  width: 200px;
+  text-align: center;
+  margin-top: 15px;
+  margin-right: -40px;
+}
+.city_Online em strong {
+  font-size: 14px;
+}
+.city_Online a {
+  width: 120px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  float: right;
+  cursor: pointer;
+  background: #EC4A4A;
+}
+.city_Online a:hover {
+  background: #E6012D;
+  transition: all .3s ease-in;
+}
+
+.active {
+  color: #157EF6 !important;
+}
+
+.actives {
+  color: #EC4A4A !important;
+}

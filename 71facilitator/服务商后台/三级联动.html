@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+服务类型：
+<select style="width: 100px;" id="pre" onchange="chg(this);">
+    <option value="-1">请选择</option>
+</select>
+大类：
+<select style="width: 100px;" id="city" onchange="chg2(this)" ;></select>
+项目/服务信息：
+<select style="width: 100px;" id="area" name=""></select>
+</body>
+<script>
+    //声明服务类型
+    var pres = ["企业资质", "企业认证"]; //直接声明Array
+    //声明大类
+    var cities = [
+        ["施工总承包", "专业承包", "设计资质","其他资质"],
+        ["管理体系认证", "IT资质","信用评级","项目相关申报"]
+//        ["**", "**"]
+    ];
+    var areas = [
+        [
+
+            [["建筑工程","javascript:;"], ["公路工程","javascript:;"],[ "电力工程","javascript:;"] , ["矿山工程","javascript:;"],["通信工程","javascript:;"],["机电工程","javascript:;"],["港口与航道工程","javascript:;"],["水利水电工程","javascript:;"],["市政公用工程","javascript:;"]],
+            [["地基基础工程","javascript:;"], ["钢结构工程","javascript:;"], ["模版脚手架","javascript:;"],["建筑装饰装修工程","javascript:;"],["建筑机电工程","javascript:;"],["建筑幕墙工程","javascript:;"],["城市及道路照明","javascript:;"],["公路交通工程","javascript:;"],["水利水电工程","javascript:;"],["消防设施工程","javascript:;"],["起重设备安装工程","javascript:;"],["电子与智能化工程","javascript:;"],["防水防腐保温工程","javascript:;"]],
+            [["建筑行业","javascript:;"], ["水利行业","javascript:;"], ["市政行业","javascript:;"],["公路行业","javascript:;"],["建材行业","javascript:;"],["电力行业","javascript:;"],["冶金行业","javascript:;"],["机械行业","javascript:;"],["农林行业","javascript:;"],["建筑幕墙","javascript:;"],["建筑装饰","javascript:;"],["建筑智能化","javascript:;"],["消防设施","javascript:;"],["环境工程","javascript:;"],["照明工程","javascript:;"]],
+            [["劳务分包资质","javascript:;"],["房地产开发资质","javascript:;"],["安全生产许可证","javascript:;"]]
+        ],
+        [
+            [["ISO9001质量管理体系","javascript:;"], ["GT/T50430建筑施工质量管理体系","javascript:;"], ["ISO14001环境管理体系","javascript:;"],["ISO20000","javascript:;"],["IT服务管理体系","javascript:;"],["OHHAS18001职业健康安全","javascript:;"],["ISO27001信息安全管理体系","javascript:;"],["知识产权贯标","javascript:;"],["TS16949汽车行业质量体系","javascript:;"]],
+            [["CMMI软件能力成熟度模型","javascript:;"], ["ITSS信息技术服务标准","javascript:;"]],
+            [["AAA企业信用评级","javascript:;"],["广东省守合同重信用","javascript:;"]],
+            [["国家高新技术企业认定","javascript:;"],["政府资质项目申报","javascript:;"]]
+        ]
+//        [
+//            ["**", "**"],
+//            ["**", "**"]
+//        ]
+    ]
+    //设置一个服务类型的公共下标
+    var pIndex = -1;
+    var preEle = document.getElementById("pre");
+    var cityEle = document.getElementById("city");
+    var areaEle = document.getElementById("area");
+    //先设置大类的值
+    for (var i = 0; i < pres.length; i++) {
+        //声明option.<option value="pres[i]">Pres[i]</option>
+        var op = new Option(pres[i], i);
+        //添加
+        preEle.options.add(op);
+    }
+    function chg(obj) {
+        if (obj.value == -1) {
+            cityEle.options.length = 0;
+            areaEle.options.length = 0;
+        }
+        //获取值
+        var val = obj.value;
+        pIndex = obj.value;
+        //获取大类
+        var cs = cities[val];
+        //获取项目/服务信息
+        var as = areas[val][0];
+        var aas = areas[val][0][0];
+        //先清空大类
+        cityEle.options.length = 0;
+        areaEle.options.length = 0;
+        for (var i = 0; i < cs.length; i++) {
+            var op = new Option(cs[i], i);
+            cityEle.options.add(op);
+        }
+        for (var i = 0; i < as.length; i++) {
+            var op = new Option(as[i][0], i);
+            areaEle.options.add(op);
+        }
+    }
+    function chg2(obj) {
+        var val = obj.selectedIndex;
+        var as = areas[pIndex][val];
+        areaEle.options.length = 0;
+        for (var i = 0; i < as.length; i++) {
+            var op = new Option(as[i][0], i);
+            areaEle.options.add(op);
+        }
+    }
+</script>
+</html>

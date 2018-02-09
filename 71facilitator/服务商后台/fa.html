@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap Admin</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.css">
+    
+    <link rel="stylesheet" type="text/css" href="stylesheets/theme.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
+
+    <script src="lib/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+    <!-- Demo page code -->
+
+    <style type="text/css">
+        #line-chart {
+            height:300px;
+            width:800px;
+            margin: 0px auto;
+            margin-top: 1em;
+        }
+        .brand { font-family: georgia, serif; }
+        .brand .first {
+            color: #ccc;
+            font-style: italic;
+        }
+        .brand .second {
+            color: #fff;
+            font-weight: bold;
+        }
+        h1 {
+            text-align:center;
+        }
+        .pop-win {
+            position:fixed;
+            top:0px;
+            left:0px;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,0.5);
+            visibility: hidden;
+
+
+        }
+        .pop-win div {
+            position:absolute;
+            width:900px;
+            height:200px;
+            padding:10px;
+            background: rgba(255,255,255,1);
+            border:1px solid white;
+            border-radius:6px;
+
+        }
+        footer{
+            margin-top: -3.6em;
+        }
+
+
+        /*CSS 水平和垂直居中方法【 1  CSS3】：  将父级元素设为盒子模型，使子元素水平垂直居中。
+        .pop-win {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        } */
+
+        /*CSS 水平和垂直居中方法【 2 CSS2】： 将要设置居中的元素分别向 下 和 向 右 各偏移50%，再将margin值设为 负的 元素本身的宽高咸半
+        .pop-main {
+            top:50%;
+            left:50%;
+            margin-top:-100px;
+            margin-left:-200px;
+        }*/
+
+        /*CSS 水平和垂直居中方法【 3 CSS3】： 和上面方法2的原理一样
+        .pop-main {
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+        }*/
+
+        /*CSS 水平和垂直居中方法【 4 推荐】：将要设置居中的元素上 、右、下、左 都设为0，再将margin值设为水平垂直居中
+        .pop-main {
+            top:0px;
+            right:0px;
+            bottom:0px;
+            left:0px;
+            margin:auto;
+        }*/
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7 "> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8 "> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9 "> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--> 
+  <body class=""> 
+  <!--<![endif]-->
+    
+    <div class="navbar">
+        <div class="navbar-inner">
+                <ul class="nav pull-right">
+                    
+                    <li><a href="#" class="hidden-phone visible-tablet visible-desktop" role="button">设置</a></li>
+                    <li id="fat-menu" class="dropdown">
+                        <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-user"></i> Jack Smith
+                            <i class="icon-caret-down"></i>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a tabindex="-1" href="#">我的账户</a></li>
+                            <li class="divider"></li>
+                            <li><a tabindex="-1" class="visible-phone" href="#">设置</a></li>
+                            <li class="divider visible-phone"></li>
+                            <li><a tabindex="-1" href="sign-in.html">退出</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <a class="brand" href="index.html"><span class="first">商家</span> <span class="second">管理系统</span></a>
+        </div>
+    </div>
+    
+
+
+    
+    <div class="sidebar-nav">
+        <!--<form class="search form-inline">-->
+            <!--<input type="text" placeholder="Search...">-->
+        <!--</form>-->
+
+        <a href="#dashboard-menu" class="nav-header" data-toggle="collapse"><i class="icon-dashboard"></i>我提供的服务</a>
+        <ul id="dashboard-menu" class="nav nav-list collapse in">
+            <li><a href="index.html">服务商</a></li>
+            <li class="active"><a href="users.html">服务信息列表</a></li>
+            <li ><a href="user.html">我的资料</a></li>
+            <li ><a href="media.html">我的页面模型</a></li>
+            <li ><a href="calendar.html">月度情况</a></li>
+            
+        </ul>
+
+        <a href="#legal-menu" class="nav-header" data-toggle="collapse"><i class="icon-legal"></i>服务订单</a>
+        <ul id="legal-menu" class="nav nav-list collapse">
+            <li ><a href="in_process.html">办理中</a></li>
+            <li ><a href="Done.html">已完成</a></li>
+            <li ><a href="Refunded.html">已退款</a></li>
+        </ul>
+
+        <a href="#accounts-menu" class="nav-header" data-toggle="collapse"><i class="icon-briefcase"></i>账户设置<span class="label label-info">+3</span></a>
+        <ul id="accounts-menu" class="nav nav-list collapse">
+            <li ><a href="sign-in.html">登入</a></li>
+            <li ><a href="sign-up.html">注册</a></li>
+            <li ><a href="reset-password.html">密码重置</a></li>
+        </ul>
+
+
+
+
+
+        <a href="help.html" class="nav-header" ><i class="icon-question-sign"></i>帮助</a>
+        <a href="faq.html" class="nav-header" ><i class="icon-comment"></i>常见问题</a>
+    </div>
+    
+
+    
+    <div class="content">
+        
+        <div class="header">
+            
+            <h1 class="page-title">创建服务</h1>
+        </div>
+        
+                <ul class="breadcrumb">
+            <li><a href="index.html">返回</a> <span class="divider">/</span></li>
+            <li class="active">创建新服务</li>
+        </ul>
+        <div style="height: 1200px;overflow: hidden;position: relative;top:-7px;">
+            <iframe src="fabu/fabu.html" width="100%" height="100%" marginheight="0" marginwidth="0" frameborder="0" scrolling="no"></iframe>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                    
+
+
+
+<div class="modal small hide fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">删除确认</h3>
+    </div>
+    <div class="modal-body">
+        <p class="error-text"><i class="icon-warning-sign modal-icon"></i>你确定要删除此服务吗?</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+        <button class="btn btn-danger del_server" data-dismiss="modal">删除</button>
+    </div>
+</div>
+
+
+                    
+                    <footer>
+                        <hr>
+                        
+                        <p class="pull-right">Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">百度统计</a></p>
+
+
+                        <p> Copyright © 2014 www.zhongzhu71.com 版权所有 <a href="#" target="_blank"> 粤ICP备15046934号</a></p>
+                    </footer>
+                    
+            </div>
+        </div>
+
+    </div>
+
+<!--弹出框-->
+  <section class="pop-win">
+      <div class="pop-main" id="pop-main">
+
+          服务类型：
+          <select  id="pre" onchange="chg(this);">
+              <option value="-1">请选择</option>
+          </select>
+          大类：
+          <select  id="city" onchange="chg2(this)" ;></select>
+          项目/服务信息：
+          <select  id="area" name=""></select>
+          服务单价：
+          <input type="text" class="price" value="面议">
+          <section style="margin-top: 90px">
+              <button class="btn btn-primary new_server"><i class="icon-plus"></i> 添加服务</button>
+              <button type="submit" class="btn btn-success" onclick='window.location.href="http://www.zhongzhu71.com/ProductEdit/ProFabuIdent?product_id=0"; '>创建新服务</button>
+              <button type="button" class="btn btn-danger qu_server" style="float: right">取消</button>
+          </section>
+
+
+      </div>
+  </section>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript">
+        var num = 0;
+        $("[rel=tooltip]").tooltip();
+        $(function() {
+           $('.demo-cancel-click').click(function(){return false;});
+            $('.add_server').click(function () {
+                $('.pop-win').css("visibility","visible");
+
+            });
+            $('.qu_server').click(function () {
+                $('.pop-win').css("visibility","hidden");
+
+            });
+            $('.new_server').click(function () {
+               var server_type = $('#pre option:selected').text();
+               var server_dalie = $('#city option:selected').text();
+               var server_info = $('#area option:selected').text();
+               var length = $("tbody tr").length;
+               var price  = $(".price").val();
+               length++;
+              // alert(length+server_type+server_dalie+server_info+price)
+                if (server_type=="请选择"){
+
+                }else {
+
+                    $(".table tbody").append('<tr><td>'+length+'</td><td>'+server_info+'</td><td>'+server_type+'-'+server_dalie+'</td><td>'+price+'</td><td> <a class="d_remove" href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a></td></tr>');
+                    $('.pop-win').css("visibility","hidden");
+                    $(".price").val("面议");
+                }
+            });
+            $('.d_remove').click(function () {
+              var  nums  = $(this).parent().parent().index();
+//                alert(nums);
+                num = nums;
+                return  num;
+
+            });
+            $('.del_server').click(function () {
+
+               $('.table tbody tr').eq(num).remove();
+
+               //后端请使用异步请求刷新列表序号功能
+                var singles = $('.table tbody tr ').length; // 获得剩余单选题数量
+
+                for(var i = 0; i < singles; i++){
+                    $('.table tbody tr').eq(i).find('td').eq(0).html(i+1); // 设置编号
+                }
+            })
+
+        });
+
+
+        //声明服务类型
+        var pres = ["企业资质", "企业认证"]; //直接声明Array
+        //声明大类
+        var cities = [
+            ["施工总承包", "专业承包", "设计资质","其他资质"],
+            ["管理体系认证", "IT资质","信用评级","项目相关申报"]
+//        ["**", "**"]
+        ];
+        var areas = [
+            [
+
+                [["建筑工程","javascript:;"], ["公路工程","javascript:;"],[ "电力工程","javascript:;"] , ["矿山工程","javascript:;"],["通信工程","javascript:;"],["机电工程","javascript:;"],["港口与航道工程","javascript:;"],["水利水电工程","javascript:;"],["市政公用工程","javascript:;"]],
+                [["地基基础工程","javascript:;"], ["钢结构工程","javascript:;"], ["模版脚手架","javascript:;"],["建筑装饰装修工程","javascript:;"],["建筑机电工程","javascript:;"],["建筑幕墙工程","javascript:;"],["城市及道路照明","javascript:;"],["公路交通工程","javascript:;"],["水利水电工程","javascript:;"],["消防设施工程","javascript:;"],["起重设备安装工程","javascript:;"],["电子与智能化工程","javascript:;"],["防水防腐保温工程","javascript:;"]],
+                [["建筑行业","javascript:;"], ["水利行业","javascript:;"], ["市政行业","javascript:;"],["公路行业","javascript:;"],["建材行业","javascript:;"],["电力行业","javascript:;"],["冶金行业","javascript:;"],["机械行业","javascript:;"],["农林行业","javascript:;"],["建筑幕墙","javascript:;"],["建筑装饰","javascript:;"],["建筑智能化","javascript:;"],["消防设施","javascript:;"],["环境工程","javascript:;"],["照明工程","javascript:;"]],
+                [["劳务分包资质","javascript:;"],["房地产开发资质","javascript:;"],["安全生产许可证","javascript:;"]]
+            ],
+            [
+                [["ISO9001质量管理体系","javascript:;"], ["GT/T50430建筑施工质量管理体系","javascript:;"], ["ISO14001环境管理体系","javascript:;"],["ISO20000","javascript:;"],["IT服务管理体系","javascript:;"],["OHHAS18001职业健康安全","javascript:;"],["ISO27001信息安全管理体系","javascript:;"],["知识产权贯标","javascript:;"],["TS16949汽车行业质量体系","javascript:;"]],
+                [["CMMI软件能力成熟度模型","javascript:;"], ["ITSS信息技术服务标准","javascript:;"]],
+                [["AAA企业信用评级","javascript:;"],["广东省守合同重信用","javascript:;"]],
+                [["国家高新技术企业认定","javascript:;"],["政府资质项目申报","javascript:;"]]
+            ]
+//        [
+//            ["**", "**"],
+//            ["**", "**"]
+//        ]
+        ]
+        //设置一个服务类型的公共下标
+        var pIndex = -1;
+        var preEle = document.getElementById("pre");
+        var cityEle = document.getElementById("city");
+        var areaEle = document.getElementById("area");
+        //先设置大类的值
+        for (var i = 0; i < pres.length; i++) {
+            //声明option.<option value="pres[i]">Pres[i]</option>
+            var op = new Option(pres[i], i);
+            //添加
+            preEle.options.add(op);
+        }
+        function chg(obj) {
+            if (obj.value == -1) {
+                cityEle.options.length = 0;
+                areaEle.options.length = 0;
+            }
+            //获取值
+            var val = obj.value;
+            pIndex = obj.value;
+            //获取大类
+            var cs = cities[val];
+            //获取项目/服务信息
+            var as = areas[val][0];
+            var aas = areas[val][0][0];
+            //先清空大类
+            cityEle.options.length = 0;
+            areaEle.options.length = 0;
+            for (var i = 0; i < cs.length; i++) {
+                var op = new Option(cs[i], i);
+                cityEle.options.add(op);
+            }
+            for (var i = 0; i < as.length; i++) {
+                var op = new Option(as[i][0], i);
+                areaEle.options.add(op);
+            }
+        }
+        function chg2(obj) {
+            var val = obj.selectedIndex;
+            var as = areas[pIndex][val];
+            areaEle.options.length = 0;
+            for (var i = 0; i < as.length; i++) {
+                var op = new Option(as[i][0], i);
+                areaEle.options.add(op);
+            }
+        }
+
+        window.onload = function() {
+            var oMain = document.querySelector('#pop-main');
+
+
+            oMain.style.left = (document.documentElement.clientWidth - oMain.offsetWidth) / 2 +'px';
+            oMain.style.top = (document.documentElement.clientHeight - oMain.offsetHeight) / 2 +'px';
+            (function(doc, win) {
+                var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                    recalc = function() {
+                        console.log('窗口大小被改变啦。。。');
+                        oMain.style.left = (document.documentElement.clientWidth - oMain.offsetWidth) / 2 + 'px';
+                        oMain.style.top = (document.documentElement.clientHeight - oMain.offsetHeight) / 2 + 'px';
+                    };
+                if(!doc.addEventListener) {
+                    return false;
+                }
+                win.addEventListener(resizeEvt, recalc, false);
+                doc.addEventListener('DOMContentLoaded', recalc, false);
+            })(document, window);
+
+        };
+    </script>
+    
+  </body>
+</html>
+
+
